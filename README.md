@@ -11,4 +11,4 @@ Array Problems
 - [1431. Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/) | [Solution](./src/array/easy/KidsWithGrNumCandies.java)
 - [1470. Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/) | [Solution](./src/array/easy/ShuffleTheArray.java)
 - [1. Two Sum 🔥](https://leetcode.com/problems/two-sum/) | [Solution](./src/array/easy/TwoSum.java)
-- [392. Is Subsequence 🔥](https://leetcode.com/problems/is-subsequence/) | [Solution](./src/array/easy/Subsequence.java) | [Notes](./notes/is-subsequence.md)
+- [392. Is Subsequence 🔥](https://leetcode.com/problems/is-subsequence/) | [Solution](./src/array/easy/Subsequence.java)
