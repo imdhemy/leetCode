@@ -1,5 +1,7 @@
 package array.easy;
 
+import java.util.List;
+
 public class Subsequence {
 
   public boolean isSubsequence(String s, String t) {
@@ -20,5 +22,21 @@ public class Subsequence {
     }
 
     return sPointer == s.length();
+  }
+
+  public boolean isValidSubsequence(List<Integer> array, List<Integer> sequence) {
+    if (sequence.size() > array.size()) {
+      return false;
+    }
+
+    int arrayPointer = 0, sequencePointer = 0;
+    while (arrayPointer < array.size() && sequencePointer < sequence.size()) {
+      if (array.get(arrayPointer).equals(sequence.get(sequencePointer))) {
+        sequencePointer++;
+      }
+      arrayPointer++;
+    }
+
+    return sequencePointer == sequence.size();
   }
 }
