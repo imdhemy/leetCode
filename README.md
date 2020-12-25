@@ -13,4 +13,4 @@ Array Problems
 - [392. Is Subsequence 🔥](https://leetcode.com/problems/is-subsequence/) | [Solution](./src/array/easy/Subsequence.java)
 
 ## Medium Array Problems
-- [15. 3Sum](https://leetcode.com/problems/3sum/) | [Solution](./src/array/medium/ThreeNumberSum.java)
+- [15. 3Sum 🔥](https://leetcode.com/problems/3sum/) | [Solution](./src/array/medium/ThreeNumberSum.java) | [Faster Solution](https://leetcode.com/problems/3sum/discuss/896786/Java-100-5ms-or-Next-fastest-is-14ms-or-Explanation)
