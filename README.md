@@ -11,3 +11,6 @@ Array Problems
 - [1470. Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/) | [Solution](./src/array/easy/ShuffleTheArray.java)
 - [1. Two Sum 🔥](https://leetcode.com/problems/two-sum/) | [Solution](./src/array/easy/TwoSum.java)
 - [392. Is Subsequence 🔥](https://leetcode.com/problems/is-subsequence/) | [Solution](./src/array/easy/Subsequence.java)
+
+## Medium Array Problems
+- [15. 3Sum](https://leetcode.com/problems/3sum/) | [Solution](./src/array/medium/ThreeNumberSum.java)
