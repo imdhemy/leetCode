@@ -14,3 +14,4 @@ Array Problems
 
 ## Medium Array Problems
 - [15. 3Sum 🔥](https://leetcode.com/problems/3sum/) | [Solution](./src/array/medium/ThreeNumberSum.java) | [Faster Solution](https://leetcode.com/problems/3sum/discuss/896786/Java-100-5ms-or-Next-fastest-is-14ms-or-Explanation)
+- [1200. Minimum Absolute Difference 🔥](https://leetcode.com/problems/minimum-absolute-difference/) | [Solution](./src/array/medium/MinAbsoluteDiff.java)
