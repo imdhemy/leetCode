@@ -3,6 +3,9 @@ package easy;
 public class ThirdMax {
 
     public static int solution(int[] nums) {
+        if (nums.length == 1) return nums[0];
+        if (nums.length == 2) return Math.max(nums[0], nums[1]);
+
         int firstMax = nums[0];
         Integer secondMax = null;
         Integer thirdMax = null;

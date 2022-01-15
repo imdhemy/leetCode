@@ -21,7 +21,7 @@ class ThirdMaxTest {
     }
 
     @Test
-    void it_returns_third_max_number() {
+    void it_returns_third_max_number_and_skips_repeated_numbers() {
         Assertions.assertEquals(1, ThirdMax.solution(new int[]{2, 2, 3, 1}));
     }
 
