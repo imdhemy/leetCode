@@ -1,24 +1,25 @@
 package easy;
 
-import java.util.ArrayList;
-
 public class Palindrome {
     public static boolean solution(String s) {
-        s = s.toLowerCase();
-        ArrayList<Character> characters = new ArrayList<>();
-        for (int i = 0; i < s.length(); i++) {
-            if (Character.isLetterOrDigit(s.charAt(i)))
-                characters.add(s.charAt(i));
-        }
+        if (s == null || s.length() == 0) return true;
 
         int left = 0;
-        int right = characters.size() - 1;
+        int right = s.length() - 1;
+        s = s.toLowerCase();
 
         while (left < right) {
-            if (characters.get(left) != characters.get(right))
-                return false;
-            left++;
-            right--;
+            if (!Character.isLetterOrDigit(s.charAt(left)))
+                left++;
+            else if (!Character.isLetterOrDigit(s.charAt(right)))
+                right--;
+
+            else {
+                if (s.charAt(left) != s.charAt(right))
+                    return false;
+                left++;
+                right--;
+            }
         }
 
         return true;
