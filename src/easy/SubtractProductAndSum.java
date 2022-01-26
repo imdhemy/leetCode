@@ -2,10 +2,9 @@ package easy;
 
 public class SubtractProductAndSum {
     public static int solution(int n) {
-        int lastDigit = n % 10;
-        int sum = lastDigit;
-        int product = lastDigit;
-        n /= 10;
+        int lastDigit;
+        int sum = 0;
+        int product = 1;
 
         while (n > 0) {
             lastDigit = n % 10;
