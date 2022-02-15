@@ -24,4 +24,20 @@ public class JewelsAndStones {
 
         return result;
     }
+
+    public static int numJewelsInStonesWithString(String jewels, String stones) {
+        if (jewels.isEmpty() || stones.isEmpty()) {
+            return 0;
+        }
+
+        int result = 0;
+
+        for (int i = 0; i < stones.length(); i++) {
+            if (jewels.indexOf(stones.charAt(i)) != -1) {
+                result++;
+            }
+        }
+
+        return result;
+    }
 }
