@@ -48,7 +48,7 @@ It takes two numbers as operands and does XOR on every bit. The result of XOR os
 
 ## Left shift `<<`
 
-It takes two numbers, right shifts the bits of the first operand, the second operand decides the number of places to
+It takes two numbers, left shifts the bits of the first operand, the second operand decides the number of places to
 shift.
 
 |     | 8   | 4   | 2   | 1   | Value |
@@ -64,5 +64,20 @@ When we left shift all bits and add `0` at the beginning we have the following v
 |       | ↙   | ↙   | ↙   | ↙   | 0     |
 | ~~0~~ | 0   | 1   | 1   | 0   | 6     |
 
-- Right shift `>>`
+## Right shift `>>`
 
+It takes two numbers, right shifts the bits of the first operand, the second operand decides the number of places to
+shift.
+
+|     | 8   | 4   | 2   | 1   | Value |
+|-----|-----|-----|-----|-----|-------|
+|     | 0   | 1   | 1   | 0   | 6     |
+|     | ↘   | ↘   | ↘   | ↘   | 6 / 2 |
+
+When we right shift all bits and add `0` at the end we have the following value:
+
+|     | 8     | 4   | 2   | 1   | Value |
+|-----|-------|-----|-----|-----|-------|
+|     | 0     | 1   | 1   | 0   | 6     |
+|     | ↘     | ↘   | ↘   | ↘   | 0     |
+|     | `0`   | 0   | 1   | 1   | 3     |
