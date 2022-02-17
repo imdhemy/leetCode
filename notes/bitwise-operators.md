@@ -19,15 +19,23 @@ operands are `1.
 It takes two numbers as operands and does OR on every bit of the two numbers. The result of OR is `1` if any of the two
 bits is `1`.
 
-| A   | B   | OR  |
-|-----|-----|-----|
-| 0   | 0   | 0   |
-| 0   | 1   | 1   |
-| 1   | 0   | 1   |
-| 1   | 1   | 1   |
+| A   | B   | OR   |
+|-----|-----|------|
+| 0   | 0   | 0    |
+| 0   | 1   | 1    |
+| 1   | 0   | 1    |
+| 1   | 1   | 1    |
+
+## The **Bitwise NOT** `~`
+
+It takes one number and inverts all bit of it.
+
+| A   | NOT |
+|-----|-----|
+| 1   | 0   |
+| 0   | 1   |
 
 - The **Bitwise XOR** `^`
 - Left shift `<<`
 - Right shift `>>`
-- The **Bitwise NOT** `~`
 
