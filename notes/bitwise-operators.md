@@ -35,7 +35,17 @@ It takes one number and inverts all bit of it.
 | 1   | 0   |
 | 0   | 1   |
 
-- The **Bitwise XOR** `^`
+## The **Bitwise XOR** `^`
+
+It takes two numbers as operands and does XOR on every bit. The result of XOR os `1` if the two bits are different.
+
+| A   | B   | XOR |
+|-----|-----|-----|
+| 0   | 0   | 0   |
+| 0   | 1   | 1   |
+| 1   | 0   | 1   |
+| 1   | 1   | 0   |
+
 - Left shift `<<`
 - Right shift `>>`
 
