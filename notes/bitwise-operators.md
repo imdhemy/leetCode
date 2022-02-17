@@ -46,6 +46,23 @@ It takes two numbers as operands and does XOR on every bit. The result of XOR os
 | 1   | 0   | 1   |
 | 1   | 1   | 0   |
 
-- Left shift `<<`
+## Left shift `<<`
+
+It takes two numbers, right shifts the bits of the first operand, the second operand decides the number of places to
+shift.
+
+|     | 8        | 4        | 2        | 1          | Value |
+|-----|----------|----------|----------|------------|-------|
+|     | 0        | 0        | 1        | 1          | 3     |
+|     | &#x2199; | &#x2199; | &#x2199; | &#x2199;   | 3 * 2 |
+
+When we left shift all bits and add `0` at the beginning we have the following value:
+
+|       | 8          | 4        | 2        | 1        | Value |
+|-------|------------|----------|----------|----------|-------|
+|       | 0          | 0        | 1        | 1        | 3     |
+|       | &#x2199;   | &#x2199; | &#x2199; | &#x2199; | 0     |
+| ~~0~~ | 0          | 1        | 1        | 0        | 6     |
+
 - Right shift `>>`
 
