@@ -81,3 +81,6 @@ When we right shift all bits and add `0` at the end we have the following value:
 |     | 0     | 1   | 1   | 0   | 6     |
 |     | ↘     | ↘   | ↘   | ↘   | 0     |
 |     | `0`   | 0   | 1   | 1   | 3     |
+
+> Don't shift an expression by negative number of bits or by greater than or equal to the number of bits that exist in the operand
+
