@@ -39,6 +39,8 @@ It takes one number and inverts all bit of it.
 
 It takes two numbers as operands and does XOR on every bit. The result of XOR os `1` if the two bits are different.
 
+> It's the most important operator from a tech. interview perspective.
+
 | A   | B   | XOR |
 |-----|-----|-----|
 | 0   | 0   | 0   |
@@ -95,7 +97,7 @@ flowchart TB
     isNegative{RT < 0 ?}
     calcPrecision[Prc = precisionOf LT]
     isGTPercision{RT >= Prc ?}
-    isExceedingMax{is\n PreOf LT + RT > MAX_PRC ?}
+    isExceedingMax{is\n PrcOf LT + RT\n >\n MAX_PRC ?}
     
     start-->input-->isNegative
     isNegative-->|Yes| undefined
