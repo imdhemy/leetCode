@@ -95,13 +95,16 @@ flowchart TB
     isNegative{RT < 0 ?}
     calcPrecision[Prc = precisionOf LT]
     isGTPercision{RT >= Prc ?}
+    isExceedingMax{is\n PreOf LT + RT > MAX_PRC ?}
     
     start-->input-->isNegative
     isNegative-->|Yes| undefined
     isNegative-->|No| calcPrecision
     calcPrecision--> isGTPercision
     isGTPercision-->|Yes| undefined
-    isGTPercision-->|No| shift
+    isGTPercision-->|No| isExceedingMax
+    isExceedingMax-->|Yes| undefined
+    isExceedingMax-->|No| shift
     -->result
     -->stop
 ```
