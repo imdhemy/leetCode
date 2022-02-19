@@ -39,6 +39,13 @@ It takes one number and inverts all bit of it.
 
 It takes two numbers as operands and does XOR on every bit. The result of XOR os `1` if the two bits are different.
 
+| A   | B   | XOR |
+|-----|-----|-----|
+| 0   | 0   | 0   |
+| 0   | 1   | 1   |
+| 1   | 0   | 1   |
+| 1   | 1   | 0   |
+
 > It's the most important operator from a tech. interview perspective.
 
 Below is a list of problems where you can use XOR
@@ -54,13 +61,6 @@ Below is a list of problems where you can use XOR
 - Count number of bits to be flipped to convert a to b.
 - Find the element that appears once.
 - Detect if two integers have opposite signs.
-
-| A   | B   | XOR |
-|-----|-----|-----|
-| 0   | 0   | 0   |
-| 0   | 1   | 1   |
-| 1   | 0   | 1   |
-| 1   | 1   | 0   |
 
 ## Left shift `<<`
 
