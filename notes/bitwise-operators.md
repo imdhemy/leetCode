@@ -95,16 +95,18 @@ flowchart TB
     shift[Shift bits]
     result[/Result/]
     isNegative{RT < 0 ?}
-    calcPrecision[Prc = precisionOf LT]
+    calcPrecision[Prc = PrcOf LT]
     isGTPercision{RT >= Prc ?}
-    isExceedingMax{is\n PrcOf LT + RT\n >\n MAX_PRC ?}
+    prcAfterShift[PrcSh = PrcOf LT + RT]
+    isExceedingMax{PrcSh > MAX_PRC ?}
     
     start-->input-->isNegative
     isNegative-->|Yes| undefined
     isNegative-->|No| calcPrecision
     calcPrecision--> isGTPercision
     isGTPercision-->|Yes| undefined
-    isGTPercision-->|No| isExceedingMax
+    isGTPercision-->|No| prcAfterShift
+    prcAfterShift-->isExceedingMax
     isExceedingMax-->|Yes| undefined
     isExceedingMax-->|No| shift
     -->result

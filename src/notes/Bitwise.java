@@ -11,7 +11,7 @@ public class Bitwise {
             throw new RuntimeException("Logical Error.");
 
         // count of bits after shifting exceeds the max bit size
-        if (countBits(left) + right >= countBits(Integer.MAX_VALUE))
+        if (countBits(left) + right > countBits(Integer.MAX_VALUE))
             throw new RuntimeException("Logical Error.");
 
         return left << right;
