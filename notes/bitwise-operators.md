@@ -84,3 +84,24 @@ When we right shift all bits and add `0` at the end we have the following value:
 
 > Don't shift an expression by negative number of bits or by greater than or equal to the number of bits that exist in the operand
 
+```mermaid
+flowchart TB
+    start((Start))
+    input[/LT, RT/]
+    stop((Stop))
+    undefined[/Undefined/]
+    shift[Shift bits]
+    result[/Result/]
+    isNegative{RT < 0 ?}
+    calcPrecision[Prc = precisionOf LT]
+    isGTPercision{RT >= Prc ?}
+    
+    start-->input-->isNegative
+    isNegative-->|Yes| undefined
+    isNegative-->|No| calcPrecision
+    calcPrecision--> isGTPercision
+    isGTPercision-->|Yes| undefined
+    isGTPercision-->|No| shift
+    -->result
+    -->stop
+```
