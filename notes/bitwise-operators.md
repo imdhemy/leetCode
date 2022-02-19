@@ -41,6 +41,20 @@ It takes two numbers as operands and does XOR on every bit. The result of XOR os
 
 > It's the most important operator from a tech. interview perspective.
 
+Below is a list of problems where you can use XOR
+
+- Odd occurring number.
+- Find the missing element.
+- Swap two numbers without using a temporary variable
+- A Memory Efficient Doubly Linked List
+- Find the two non-repeating elements.
+- Find the two numbers with odd occurrences in an unsorted-array.
+- Add two numbers without using arithmetic operators.
+- Swap bits in a given number.
+- Count number of bits to be flipped to convert a to b.
+- Find the element that appears once.
+- Detect if two integers have opposite signs.
+
 | A   | B   | XOR |
 |-----|-----|-----|
 | 0   | 0   | 0   |
