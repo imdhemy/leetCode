@@ -5,7 +5,7 @@ The following 6 operators are bitwise operators:
 ## The **Bitwise AND** `&`
 
 It takes two numbers as operands and does AND on every bit of the two numbers. The result of AND is `1` only if the two
-operands are `1.
+operands are `1`.
 
 | A   | B   | AND |
 |-----|-----|-----|
@@ -105,3 +105,5 @@ flowchart TB
     -->result
     -->stop
 ```
+
+**Precision** is the number of digits in a number. 
