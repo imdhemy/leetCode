@@ -50,7 +50,7 @@ It takes two numbers as operands and does XOR on every bit. The result of XOR os
 
 Below is a list of problems where you can use XOR
 
-- Odd occurring number.
+- [Odd occurring number](/test/notes/BitwiseTest.java#L29).
 - Find the missing element.
 - Swap two numbers without using a temporary variable
 - A Memory Efficient Doubly Linked List
