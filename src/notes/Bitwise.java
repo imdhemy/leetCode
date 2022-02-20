@@ -20,4 +20,17 @@ public class Bitwise {
     private static int countBits(int num) {
         return (int) (Math.log(Math.abs(num)) / Math.log(2) + 1);
     }
+
+
+    public static int findOddOccurringElement(int[] elements) {
+        if (elements.length == 0) {
+            throw new RuntimeException("Empty array");
+        }
+
+        int result = 0;
+
+        for (int element : elements) result ^= element;
+
+        return result;
+    }
 }

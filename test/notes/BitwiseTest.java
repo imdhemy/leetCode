@@ -24,4 +24,14 @@ class BitwiseTest {
             Bitwise.leftShift(-Integer.MAX_VALUE, 1);
         });
     }
+
+    @Test
+    void findOddOccurringElement() {
+        Assertions.assertThrows(RuntimeException.class, () -> {
+            Bitwise.findOddOccurringElement(new int[]{});
+        });
+
+        Assertions.assertEquals(90, Bitwise.findOddOccurringElement(new int[]{12, 12, 14, 90, 14, 14, 14}));
+    }
+
 }
