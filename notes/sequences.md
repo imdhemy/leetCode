@@ -23,10 +23,10 @@ In general, we could write an arithmetic sequence like this:
 
 We can write the arithmetic sequence as a rule:
 
-![](/notes/arithmetic-sequence.png)
+<img height="40px" src="/notes/arithmetic-sequence.png"/>
 
 **To sum up the terms of an arithmetic sequence:**
 
-- When the last term is known ![](/notes/aithmetic-seq-sum-last.png)
-- When the last term is not known ![](/notes/arithmetic-seq-sum.png)
+- When the last term is known <img height="40px" src="/notes/aithmetic-seq-sum-last.png"/>
+- When the last term is not known <img height="40px" src="/notes/arithmetic-seq-sum.png"/>
 
