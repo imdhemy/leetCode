@@ -28,8 +28,10 @@ We can write the arithmetic sequence as a rule:
 **To sum up the terms of an arithmetic sequence:**
 
 When the last term is known
+
 <img height="40px" src="/notes/aithmetic-seq-sum-last.png"/>
 
 When the last term is not known
+
 <img height="40px" src="/notes/arithmetic-seq-sum.png"/>
 
