@@ -23,6 +23,10 @@ In general, we could write an arithmetic sequence like this:
 
 We can write the arithmetic sequence as a rule:
 
-```
-X(n) = a + d(n-1)
-```
+![](/notes/arithmetic-sequence.png)
+
+**To sum up the terms of an arithmetic sequence:**
+
+- When the last term is known ![](/notes/aithmetic-seq-sum-last.png)
+- When the last term is not known ![](/notes/arithmetic-seq-sum.png)
+
