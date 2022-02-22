@@ -2,12 +2,12 @@ package easy;
 
 public class MissingNumber {
     public static int solution(int[] nums) {
-        int xor = 0, i;
+        double seqSum = ((double) (nums.length + 1) / 2) * nums.length;
 
-        for (i = 0; i < nums.length; i++) {
-            xor = xor ^ i ^ nums[i];
-        }
+        int numSum = 0;
+        for (int num : nums)
+            numSum += num;
 
-        return xor ^ i;
+        return (int) (seqSum - numSum);
     }
 }
