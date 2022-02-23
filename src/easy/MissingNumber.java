@@ -2,11 +2,13 @@ package easy;
 
 public class MissingNumber {
     public static int solution(int[] nums) {
-        double seqSum = ((double) (nums.length + 1) / 2) * nums.length;
+        int value = nums.length;
 
-        for (int num : nums)
-            seqSum -= num;
+        for (int i = 0; i < nums.length; i++) {
+            value += i;
+            value -= nums[i];
+        }
 
-        return (int) seqSum;
+        return value;
     }
 }
