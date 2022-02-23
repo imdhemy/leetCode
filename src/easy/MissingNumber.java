@@ -2,13 +2,13 @@ package easy;
 
 public class MissingNumber {
     public static int solution(int[] nums) {
-        int value = nums.length;
+        int a = nums.length, b = 0;
 
         for (int i = 0; i < nums.length; i++) {
-            value += i;
-            value -= nums[i];
+            a ^= i;
+            b ^= nums[i];
         }
 
-        return value;
+        return a ^ b;
     }
 }

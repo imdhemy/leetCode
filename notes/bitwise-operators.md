@@ -48,10 +48,16 @@ It takes two numbers as operands and does XOR on every bit. The result of XOR os
 
 > It's the most important operator from a tech. interview perspective.
 
+**XOR has a certain property:**
+
+- Assume `a = a1 ^ a2 ^ a3 ^ a4 ... ^ an`.
+- And `b = a1 ^ a2 ^ a3 ^ a4 ... ^ an-1`
+- Then `an = a ^ b`
+
 Below is a list of problems where you can use XOR
 
 - [Odd occurring number](/test/notes/BitwiseTest.java#L29).
-- Find the missing element.
+- [Find the missing element][/test/notes/easy.MissingNumberTest/#L6].
 - Swap two numbers without using a temporary variable
 - A Memory Efficient Doubly Linked List
 - Find the two non-repeating elements.
