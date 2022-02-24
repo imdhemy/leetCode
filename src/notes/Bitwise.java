@@ -33,4 +33,20 @@ public class Bitwise {
 
         return result;
     }
+
+    public static int findMissingNumber(int[] nums) {
+        int a = 0, b = 0;
+
+        int size = nums.length + 1;
+
+        for (int i = 1; i <= size; i++) {
+            a ^= i;
+        }
+
+        for (int num : nums) {
+            b ^= num;
+        }
+
+        return a ^ b;
+    }
 }
