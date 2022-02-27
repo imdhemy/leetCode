@@ -1,20 +1,11 @@
 package easy;
 
-import java.util.Arrays;
-
 public class ValidAnagram {
     public static boolean isAnagram(String s, String t) {
-        if (s.length() != t.length()) return false;
-
-        char[] firstArray = s.toCharArray();
-        char[] secondArray = t.toCharArray();
-
-        Arrays.sort(firstArray);
-        Arrays.sort(secondArray);
-
-        s = new String(firstArray);
-        t = new String(secondArray);
-
-        return s.equals(t);
+        int[] alphabet = new int[26];
+        for (int i = 0; i < s.length(); i++) alphabet[s.charAt(i) - 'a']++;
+        for (int i = 0; i < t.length(); i++) alphabet[t.charAt(i) - 'a']--;
+        for (int i : alphabet) if (i != 0) return false;
+        return true;
     }
 }
