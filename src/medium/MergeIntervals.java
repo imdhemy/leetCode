@@ -2,15 +2,17 @@ package medium;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 class Interval implements Comparable<Interval> {
     private int from;
     private int to;
 
+    private int calls;
+
     public Interval(int from, int to) {
         this.from = from;
         this.to = to;
+        this.calls = 0;
     }
 
     public int getFrom() {
@@ -21,49 +23,62 @@ class Interval implements Comparable<Interval> {
         return to;
     }
 
-    public Interval merge(Interval interval) {
-        int from = Math.min(this.from, interval.from);
-        int to = Math.max(this.to, interval.to);
-        return new Interval(from, to);
+    public void merge(Interval interval) {
+        this.from = Math.min(this.getFrom(), interval.getFrom());
+        this.to = Math.max(this.getTo(), interval.getTo());
     }
 
-    public boolean shouldMerge(Interval interval) {
-        return from >= interval.from && from <= interval.to ||
-                interval.from >= from && interval.from <= to;
+    public int[] toArray() {
+        return new int[]{from, to};
+    }
+
+    public boolean isOverlapping(Interval interval) {
+        return interval.getFrom() >= this.getFrom()
+                && interval.getFrom() <= this.getTo();
     }
 
     @Override
-    public int compareTo(Interval otherInterval) {
-        return this.from - otherInterval.from;
+    public int compareTo(Interval interval) {
+        return this.getFrom() - interval.getFrom();
     }
 }
 
 public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
-        List<Interval> intervalList = new ArrayList<>();
 
-        for (int[] interval : intervals)
+        if (intervals.length < 2) {
+            return intervals;
+        }
+
+        ArrayList<Interval> intervalList = new ArrayList<>();
+        ArrayList<Interval> mergedIntervals = new ArrayList<>();
+
+        for (int[] interval : intervals) {
             intervalList.add(new Interval(interval[0], interval[1]));
+        }
 
         Collections.sort(intervalList);
 
-        List<Interval> mergedIntervals = new ArrayList<>();
+        int i = 0;
+        Interval current = intervalList.get(i);
 
-        Interval current = intervalList.get(0);
-
-        for (int i = 1; i < intervalList.size(); i++) {
-            if (current.shouldMerge(intervalList.get(i)))
-                mergedIntervals.add(current.merge(intervalList.get(i)));
-            else
+        while (i < intervalList.size()) {
+            Interval next = intervalList.get(i);
+            if (current.isOverlapping(next)) {
+                current.merge(next);
+            } else {
                 mergedIntervals.add(current);
+                current = next;
+            }
+            i++;
+        }
+        mergedIntervals.add(current);
 
-            current = intervalList.get(i);
+        int[][] result = new int[mergedIntervals.size()][2];
+        for (int j = 0; j < mergedIntervals.size(); j++) {
+            result[j] = mergedIntervals.get(j).toArray();
         }
 
-        for (int i = 0; i < mergedIntervals.size(); i++) {
-            intervals[i] = new int[]{mergedIntervals.get(i).getFrom(), mergedIntervals.get(i).getTo()};
-        }
-
-        return intervals;
+        return result;
     }
 }
