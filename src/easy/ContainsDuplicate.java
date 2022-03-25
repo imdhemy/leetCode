@@ -1,14 +1,17 @@
 package easy;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
         if (nums.length < 1) return false;
 
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] == nums[j])
-                    return true;
-            }
+        Set<Integer> hashSet = new HashSet<>();
+
+        for (int num : nums) {
+            if (hashSet.contains(num)) return true;
+            hashSet.add(num);
         }
 
         return false;
