@@ -1,35 +1,21 @@
 package medium;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class GroupAnagram {
     public List<List<String>> groupAnagrams(String[] strs) {
-        List<List<String>> result = new ArrayList<>();
-        Map<Integer, List<String>> map = new HashMap<>();
+        if (strs == null || strs.length == 0) return new ArrayList<>();
 
-        int numericValue;
+        Map<String, List<String>> map = new HashMap<>();
 
-        for (String str : strs) {
-            numericValue = 0;
-            for (int i = 0; i < str.length(); i++) {
-                numericValue ^= Character.getNumericValue(str.charAt(i));
-            }
-
-            if (map.containsKey(numericValue))
-                map.get(numericValue).add(str);
-            else {
-                List<String> tmp = new ArrayList<>();
-                tmp.add(str);
-                map.put(numericValue, tmp);
-            }
+        for (String s : strs) {
+            char[] ca = s.toCharArray();
+            Arrays.sort(ca);
+            String keyStr = String.valueOf(ca);
+            if (!map.containsKey(keyStr)) map.put(keyStr, new ArrayList<>());
+            map.get(keyStr).add(s);
         }
 
-        for (int key : map.keySet())
-            result.add(map.get(key));
-
-        return result;
+        return new ArrayList<>(map.values());
     }
 }

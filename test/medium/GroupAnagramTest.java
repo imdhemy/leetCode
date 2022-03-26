@@ -14,9 +14,9 @@ class GroupAnagramTest {
         String[] input = new String[]{"eat", "tea", "tan", "ate", "nat", "bat"};
 
         List<List<String>> expected = Arrays.asList(
-                List.of("tan", "nat"),
                 List.of("eat", "tea", "ate"),
-                List.of("bat")
+                List.of("bat"),
+                List.of("tan", "nat")
         );
 
         Object[] actual = obj.groupAnagrams(input).toArray();
