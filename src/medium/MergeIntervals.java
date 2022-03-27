@@ -7,12 +7,9 @@ class Interval implements Comparable<Interval> {
     private int from;
     private int to;
 
-    private int calls;
-
     public Interval(int from, int to) {
         this.from = from;
         this.to = to;
-        this.calls = 0;
     }
 
     public int getFrom() {
