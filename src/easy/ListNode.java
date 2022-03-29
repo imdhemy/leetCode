@@ -1,13 +1,13 @@
 package easy;
 
 public class ListNode {
-    int val;
-    ListNode next;
+    public ListNode next;
+    public int val;
 
-    ListNode() {
+    public ListNode() {
     }
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
