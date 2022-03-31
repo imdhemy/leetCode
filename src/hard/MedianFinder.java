@@ -35,8 +35,7 @@ class MedianFinder {
     public double findMedian() {
         if (firstHalf.isEmpty())
             throw new RuntimeException();
-
-
+        
         if (firstHalf.size() > secondHalf.size()) {
             return (double) firstHalf.peek();
         }
