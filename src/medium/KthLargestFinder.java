@@ -1,12 +1,23 @@
 package medium;
 
-import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class KthLargestFinder {
 
     public int findKthLargest(int[] nums, int k) {
-        Arrays.sort(nums);
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
 
-        return nums[nums.length - k];
+        for (int num : nums) {
+            priorityQueue.add(num);
+
+            if (priorityQueue.size() > k)
+                priorityQueue.poll();
+        }
+
+        if (priorityQueue.isEmpty()) {
+            throw new RuntimeException();
+        }
+
+        return priorityQueue.peek();
     }
 }
