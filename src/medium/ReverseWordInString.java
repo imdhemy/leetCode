@@ -6,8 +6,13 @@ public class ReverseWordInString {
         StringBuilder sb = new StringBuilder();
 
         for (int i = split.length - 1; i >= 0; i--) {
-            if (!split[i].equals(""))
-                sb.append(split[i]).append(" ");
+            if (split[i].length() == 0)
+                continue;
+
+            if (sb.length() > 0)
+                sb.append(" ");
+
+            sb.append(split[i]);
         }
 
         return sb.toString().trim();
