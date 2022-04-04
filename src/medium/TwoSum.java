@@ -12,10 +12,9 @@ public class TwoSum {
 
             while (rt - 1 > lt && numbers[rt] > complement)
                 rt--;
-            
-            if (lt < rt && numbers[lt] + numbers[rt] == target) {
+
+            if (lt < rt && numbers[lt] + numbers[rt] == target)
                 return new int[]{lt + 1, rt + 1};
-            }
         }
 
         return null;
