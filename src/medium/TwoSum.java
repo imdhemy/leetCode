@@ -1,22 +1,23 @@
 package medium;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class TwoSum {
     public int[] twoSum(int[] numbers, int target) {
-        Map<Integer, Integer> map = new HashMap<>();
+        if (numbers == null || numbers.length < 2)
+            return null;
 
-        for (int i = 0; i < numbers.length; i++) {
-            int complement = target - numbers[i];
+        int rt = numbers.length - 1;
 
-            if (map.containsKey(complement)) {
-                return new int[]{map.get(complement) + 1, i + 1};
+        for (int lt = 0; lt < numbers.length; lt++) {
+            int complement = target - numbers[lt];
+
+            while (rt - 1 > lt && numbers[rt] > complement)
+                rt--;
+            
+            if (lt < rt && numbers[lt] + numbers[rt] == target) {
+                return new int[]{lt + 1, rt + 1};
             }
-
-            map.put(numbers[i], i);
         }
 
-        throw new RuntimeException("No solution");
+        return null;
     }
 }
