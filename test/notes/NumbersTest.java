@@ -13,4 +13,9 @@ class NumbersTest {
         Assertions.assertEquals("11", Numbers.decimalToBinary(3));
         Assertions.assertEquals("1010", Numbers.decimalToBinary(10));
     }
+
+    @Test
+    void sumUpTo() {
+        Assertions.assertEquals(55, Numbers.sumUpTo(10));
+    }
 }
