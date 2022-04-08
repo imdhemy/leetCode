@@ -2,11 +2,11 @@ package notes;
 
 public class MergeSort {
 
-    void topDown(int[] arr) {
+    public void topDown(int[] arr) {
         topDown(arr, 0, arr.length - 1);
     }
 
-    void topDown(int[] arr, int start, int end) {
+    private void topDown(int[] arr, int start, int end) {
         if (start < end) {
             int mid = (start + end) / 2;
 
@@ -17,7 +17,7 @@ public class MergeSort {
         }
     }
 
-    void topDownMerge(int[] arr, int start, int mid, int end) {
+    private void topDownMerge(int[] arr, int start, int mid, int end) {
         int[] tmp = new int[end - start + 1];
 
         int i = start, j = mid + 1, k = 0;
