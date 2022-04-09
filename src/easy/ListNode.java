@@ -1,5 +1,8 @@
 package easy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ListNode {
     public ListNode next;
     public int val;
@@ -14,5 +17,22 @@ public class ListNode {
     ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
+    }
+
+    public int[] toArray() {
+        List<Integer> list = new ArrayList<>();
+        list.add(val);
+        ListNode pointer = next;
+
+        while (pointer != null) {
+            list.add(pointer.val);
+            pointer = pointer.next;
+        }
+
+        int[] result = new int[list.size()];
+        for (int i = 0; i < list.size(); i++)
+            result[i] = list.get(i);
+
+        return result;
     }
 }
