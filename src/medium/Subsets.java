@@ -21,6 +21,8 @@ public class Subsets {
         // Pick element
         tmp.add(nums[index]);
         subsets(nums, space, tmp, index + 1);
+
+        // restore current subset for the next option
         tmp.remove(tmp.size() - 1);
 
         // Not picking the element
