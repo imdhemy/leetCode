@@ -29,7 +29,7 @@ The following tables contain the basics that should be well studied:
 | Depth-First Search   | [ ]    |
 | Binary Search        | [x]    |
 | Merge Sort           | [x]    |
-| Quick Sort           | [ ]    |
+| Quick Sort           | [x]    |
 
 ### Concepts
 
