@@ -17,7 +17,7 @@ The following tables contain the basics that should be well studied:
 | Stacks         | [x]    |
 | Queues         | [x]    |
 | Heaps          | [ ]    |
-| Vectors        | [ ]    |
+| Vectors        | [x]    |
 | ArrayLists     | [x]    |
 | Hash Tables    | [x]    |
 
