@@ -33,13 +33,13 @@ The following tables contain the basics that should be well studied:
 
 ### Concepts
 
-| Concepts               | Status |
-|------------------------|--------|
-| Bit Manipulation       | [x]    |
-| Memory (Stack vs. heap | [ ]    |
-| Recursion              | [x]    |
-| Dynamic Programming    | [ ]    |
-| Big O Time & Space     | [x]    |
+| Concepts                | Status |
+|-------------------------|--------|
+| Bit Manipulation        | [x]    |
+| Memory (Stack vs. heap) | [ ]    |
+| Recursion               | [x]    |
+| Dynamic Programming     | [ ]    |
+| Big O Time & Space      | [x]    |
 
 ## Notes
 
