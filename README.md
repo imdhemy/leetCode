@@ -49,4 +49,4 @@ Below is a study notes, helpful courses and study materials.
 - [Sequences](./notes/sequences.md).
 - [Recursion in Programming - Full Course](https://www.youtube.com/watch?v=IJDJ0kBx2LM).
 - [Solve Coding Interview Backtracking Problems - Crash Course](https://www.youtube.com/watch?v=A80YzvNwqXA).
-- [https://www.youtube.com/watch?v=6-15eccc6ek](Lower bound & upper bound binary search in Python).
+- [Lower bound & upper bound binary search in Python](https://www.youtube.com/watch?v=6-15eccc6ek).
