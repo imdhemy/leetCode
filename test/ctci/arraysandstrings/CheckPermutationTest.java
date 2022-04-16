@@ -15,5 +15,14 @@ class CheckPermutationTest {
 
         Assertions.assertFalse(CheckPermutation.check("abc", "aba"));
         Assertions.assertFalse(CheckPermutation.check("dog ", "god"));
+        Assertions.assertFalse(CheckPermutation.check("kitten", "itting"));
+    }
+
+    @Test
+    void checkInclusion() {
+        Assertions.assertTrue(CheckPermutation.checkInclusion("ab", "eidbaooo"));
+        Assertions.assertTrue(CheckPermutation.checkInclusion("adc", "dcda"));
+        Assertions.assertFalse(CheckPermutation.checkInclusion("ab", "eidboaoo"));
+        Assertions.assertFalse(CheckPermutation.checkInclusion("kitten", "sitting"));
     }
 }
