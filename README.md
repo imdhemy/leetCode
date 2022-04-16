@@ -50,3 +50,31 @@ Below is a study notes, helpful courses and study materials.
 - [Recursion in Programming - Full Course](https://www.youtube.com/watch?v=IJDJ0kBx2LM).
 - [Solve Coding Interview Backtracking Problems - Crash Course](https://www.youtube.com/watch?v=A80YzvNwqXA).
 - [Lower bound & upper bound binary search in Python](https://www.youtube.com/watch?v=6-15eccc6ek).
+
+## CTCI on LeetCode
+
+I'll try to map the "Cracking the coding interview problems" into LeetCode problems.
+
+- [Chapter 1 : Arrays and Strings](#chapter-1--arrays-and-strings).
+- Chapter 2 : Linked Lists.
+- Chapter 3 : Stacks and Queues.
+- Chapter 4 : Trees and Graphs.
+- Chapter 5 : Bit Manipulation.
+- Chapter 6 : Math and Logic Puzzles.
+- Chapter 7 : Object-Oriented Design.
+- Chapter 8 : Recursion and Dynamic Programming.
+- Chapter 9 : System Design and Scalability.
+- Chapter 10 : Sorting and Searching.
+- Chapter 11 : Testing.
+- Chapter 12 : C and C++.
+- Chapter 13 : Java.
+- Chapter 14 : Databases.
+- Chapter 15 : Threads and Locks.
+- Chapter 16 : Moderate.
+- Chapter 17 : Hard.
+
+### Chapter 1 : Arrays and Strings
+
+| CTCI      | LEETCODE                                                                     |
+|-----------|------------------------------------------------------------------------------|
+| Is Unique | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) |
