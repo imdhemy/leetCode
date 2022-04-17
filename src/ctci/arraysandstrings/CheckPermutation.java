@@ -31,7 +31,6 @@ public class CheckPermutation {
         for (int i = 0; i < s1.length(); i++)
             s1Freq[s1.charAt(i) - 'a']++;
 
-        // Sliding window
         int[] s2Freq = new int[26];
         int start = 0, end = 0;
 
@@ -42,7 +41,7 @@ public class CheckPermutation {
         }
         if (Arrays.equals(s1Freq, s2Freq)) return true;
 
-        // Sliding window
+        // window sliding
         while (end < s2.length()) {
             s2Freq[s2.charAt(start++) - 'a']--;
             s2Freq[s2.charAt(end++) - 'a']++;
