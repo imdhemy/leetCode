@@ -1,5 +1,6 @@
 package ctci.arraysandstrings;
 
+// Note: the book asks to implement it using a char array.
 public class Urlify {
     public static String encode(String str) {
         boolean charStarted = false;
