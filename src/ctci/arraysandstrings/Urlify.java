@@ -22,4 +22,23 @@ public class Urlify {
 
         return sb.toString();
     }
+
+    public static char[] encode(char[] str, int trueLen) {
+        int spaceCount = 0, index;
+        for (int i = 0; i < trueLen; i++)
+            if (Character.isWhitespace(str[i])) spaceCount++;
+
+        index = trueLen - 1 + spaceCount * 2;
+        for (int i = trueLen - 1; i >= 0; i--) {
+            if (Character.isWhitespace(str[i])) {
+                str[index--] = '0';
+                str[index--] = '2';
+                str[index--] = '%';
+            } else {
+                str[index--] = str[i];
+            }
+        }
+
+        return str;
+    }
 }
