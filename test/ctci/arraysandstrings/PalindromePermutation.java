@@ -2,23 +2,44 @@ package ctci.arraysandstrings;
 
 public class PalindromePermutation {
     public static boolean isPalindromePermutation(String str) {
-        int oddCharCount = 0;
+        int bitVector = createBitVector(str);
+        return bitVector == 0 || checkExactOneBitSet(bitVector);
+    }
 
-        char[] charArr = str.toCharArray();
-        int[] freq = new int[26];
-
-        for (char c : charArr) {
-            if (c == ' ') continue;
-
-            int ch = Character.toLowerCase(c) - 'a';
-
-            if (freq[ch] == 0) freq[ch]++;
-            else freq[ch]--;
+    private static int createBitVector(String str) {
+        int bitVector = 0;
+        for (char c : str.toCharArray()) {
+            int x = getCharNumber(c);
+            bitVector = toggle(bitVector, x);
         }
 
-        for (int i : freq)
-            if (i == 1) oddCharCount++;
+        return bitVector;
+    }
 
-        return oddCharCount == 0 || oddCharCount == 1;
+    private static boolean checkExactOneBitSet(int bitVector) {
+        return (bitVector & (bitVector - 1)) == 0;
+    }
+
+    private static int getCharNumber(char c) {
+        int a = Character.getNumericValue('a');
+        int z = Character.getNumericValue('z');
+
+        int val = Character.getNumericValue(c);
+        if (a <= val && z >= val) {
+            return val - a;
+        }
+
+        return -1;
+    }
+
+    private static int toggle(int bitVector, int x) {
+        if (x < 0) return bitVector;
+
+        int mask = 1 << x;
+
+        if ((bitVector & mask) == 0)
+            return mask;
+
+        return ~mask;
     }
 }
