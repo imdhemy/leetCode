@@ -35,11 +35,6 @@ public class PalindromePermutation {
     private static int toggle(int bitVector, int x) {
         if (x < 0) return bitVector;
 
-        int mask = 1 << x;
-
-        if ((bitVector & mask) == 0)
-            return mask;
-
-        return ~mask;
+        return bitVector ^ (1 << x);
     }
 }

@@ -51,6 +51,7 @@ Below is a study notes, helpful courses and study materials.
 - [Solve Coding Interview Backtracking Problems - Crash Course](https://www.youtube.com/watch?v=A80YzvNwqXA).
 - [Lower bound & upper bound binary search in Python](https://www.youtube.com/watch?v=6-15eccc6ek).
 - [Window Sliding Technique](https://www.geeksforgeeks.org/window-sliding-technique/)
+- [Toggling k-th bit of a number](https://www.geeksforgeeks.org/toggling-k-th-bit-number/)
 
 ## CTCI on LeetCode
 
