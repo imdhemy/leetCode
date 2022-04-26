@@ -77,8 +77,9 @@ I'll try to map the "Cracking the coding interview problems" into LeetCode probl
 
 ### Chapter 1 : Arrays and Strings
 
-| CTCI              | LEETCODE                                                                           |
-|-------------------|------------------------------------------------------------------------------------|
-| Is Unique         | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)       |
-| Check Permutation | [567. Permutation in String](https://leetcode.com/problems/permutation-in-string/) |
-| Urilfy            | Not Found                                                                          |
+| CTCI                   | LEETCODE                                                                           |
+|------------------------|------------------------------------------------------------------------------------|
+| Is Unique              | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)       |
+| Check Permutation      | [567. Permutation in String](https://leetcode.com/problems/permutation-in-string/) |
+| Urilfy                 | Not Found                                                                          |
+| Palindrome Permutation | Premium                                                                            |
