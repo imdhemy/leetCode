@@ -83,3 +83,4 @@ I'll try to map the "Cracking the coding interview problems" into LeetCode probl
 | Check Permutation      | [567. Permutation in String](https://leetcode.com/problems/permutation-in-string/) |
 | Urilfy                 | Not Found                                                                          |
 | Palindrome Permutation | Premium                                                                            |
+| One Edit Away          | Premium                                                                            |
