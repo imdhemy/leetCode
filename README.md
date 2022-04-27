@@ -52,6 +52,8 @@ Below is a study notes, helpful courses and study materials.
 - [Lower bound & upper bound binary search in Python](https://www.youtube.com/watch?v=6-15eccc6ek).
 - [Window Sliding Technique](https://www.geeksforgeeks.org/window-sliding-technique/)
 - [Toggling k-th bit of a number](https://www.geeksforgeeks.org/toggling-k-th-bit-number/)
+- Edit Distance | [Video](https://www.youtube.com/watch?v=MiqoA-yF-0M)
+  | [Geeks 4 Geeks](https://www.geeksforgeeks.org/edit-distance-dp-5/)
 
 ## CTCI on LeetCode
 
