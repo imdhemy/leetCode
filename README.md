@@ -10,16 +10,16 @@ The following tables contain the basics that should be well studied:
 
 | Data Structure | Status |
 |----------------|--------|
-| Linked Lists   | [x]    |
+| Linked Lists   | [ ]    |
 | Trees          | [ ]    |
 | Tries          | [ ]    |
 | Graphs         | [ ]    |
-| Stacks         | [x]    |
-| Queues         | [x]    |
+| Stacks         | [ ]    |
+| Queues         | [ ]    |
 | Heaps          | [ ]    |
-| Vectors        | [x]    |
-| ArrayLists     | [x]    |
-| Hash Tables    | [x]    |
+| Vectors        | [ ]    |
+| ArrayLists     | [ ]    |
+| Hash Tables    | [ ]    |
 
 ### Algorithms
 
@@ -27,19 +27,19 @@ The following tables contain the basics that should be well studied:
 |----------------------|--------|
 | Breadth-First Search | [ ]    |
 | Depth-First Search   | [ ]    |
-| Binary Search        | [x]    |
-| Merge Sort           | [x]    |
-| Quick Sort           | [x]    |
+| Binary Search        | [ ]    |
+| Merge Sort           | [ ]    |
+| Quick Sort           | [ ]    |
 
 ### Concepts
 
 | Concepts                | Status |
 |-------------------------|--------|
-| Bit Manipulation        | [x]    |
+| Bit Manipulation        | [ ]    |
 | Memory (Stack vs. heap) | [ ]    |
-| Recursion               | [x]    |
+| Recursion               | [ ]    |
 | Dynamic Programming     | [ ]    |
-| Big O Time & Space      | [x]    |
+| Big O Time & Space      | [ ]    |
 
 ## Notes
 
@@ -85,4 +85,4 @@ I'll try to map the "Cracking the coding interview problems" into LeetCode probl
 | Check Permutation      | [567. Permutation in String](https://leetcode.com/problems/permutation-in-string/) |
 | Urilfy                 | Not Found                                                                          |
 | Palindrome Permutation | Premium                                                                            |
-| One Edit Away          | Premium                                                                            |
+| One Away               | Premium                                                                            |
