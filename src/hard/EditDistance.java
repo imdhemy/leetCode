@@ -6,17 +6,30 @@ public class EditDistance {
     }
 
     private int minDistance(String str1, String str2, int m, int n) {
-        if (m == 0) return n;
+        int[][] dp = new int[m + 1][n + 1];
 
-        if (n == 0) return m;
+        for (int i = 0; i <= m; i++)
+            for (int j = 0; j <= n; j++) {
+                if (i == 0) {
+                    dp[i][j] = j;
+                    continue;
+                }
 
-        if (str1.charAt(m - 1) == str2.charAt(n - 1)) return minDistance(str1, str2, m - 1, n - 1);
+                if (j == 0) {
+                    dp[i][j] = i;
+                    continue;
+                }
 
-        int insert = minDistance(str1, str2, m, n - 1);
-        int remove = minDistance(str1, str2, m - 1, n);
-        int replace = minDistance(str1, str2, m - 1, n - 1);
+                if (str1.charAt(i - 1) == str2.charAt(j - 1)) {
+                    dp[i][j] = dp[i - 1][j - 1];
+                    continue;
+                }
+                
+                // 1 + min(insert, remove, replace)
+                dp[i][j] = 1 + min(dp[i][j - 1], dp[i - 1][j], dp[i - 1][j - 1]);
+            }
 
-        return 1 + min(insert, remove, replace);
+        return dp[m][n];
     }
 
     private int min(int x, int y, int z) {
