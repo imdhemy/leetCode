@@ -6,23 +6,23 @@ public class StringIndex {
 
         if (haystack == null || haystack.equals("")) return -1;
 
-        int max = haystack.length() - needle.length();
-        char first = needle.charAt(0);
+        if (needle.length() > haystack.length()) return -1;
 
-        for (int i = 0; i <= max; i++) {
-            // Look for first character
-            if (haystack.charAt(i) != first)
-                while (i <= max && haystack.charAt(i) != first) i++;
+        StringBuilder sb = new StringBuilder();
 
-            // Found first character, now look at the rest of value
-            if (i <= max) {
-                int j = i + 1;
-                int end = j + needle.length() - 1;
+        for (int i = 0; i < needle.length(); i++) {
+            sb.append(haystack.charAt(i));
+        }
 
-                for (int k = 1; j < end && haystack.charAt(j) == needle.charAt(k); j++) k++;
+        if (sb.toString().equals(needle))
+            return 0;
 
-                if (j == end) return i;
-            }
+        for (int i = needle.length(); i < haystack.length(); i++) {
+            sb.deleteCharAt(0);
+            sb.append(haystack.charAt(i));
+
+            if (sb.toString().equals(needle))
+                return i - needle.length() + 1;
         }
 
         return -1;
