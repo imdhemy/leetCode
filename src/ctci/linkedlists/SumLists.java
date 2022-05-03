@@ -29,10 +29,9 @@ public class SumLists {
         ListNode tail = head;
 
         while (num > 0) {
-            ListNode node = new ListNode(num % 10);
-            tail.next = node;
+            tail.next = new ListNode(num % 10);
             num /= 10;
-            tail = node;
+            tail = tail.next;
         }
 
         return head;
