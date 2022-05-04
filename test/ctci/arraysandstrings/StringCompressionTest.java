@@ -8,6 +8,7 @@ class StringCompressionTest {
     @Test
     void compress() {
         StringCompression sc = new StringCompression();
+        Assertions.assertEquals("a1b1c5a3", sc.compress("abcccccaaa"));
         Assertions.assertEquals("a2b1c5a3", sc.compress("aabcccccaaa"));
         Assertions.assertEquals("aab", sc.compress("aab"));
     }
