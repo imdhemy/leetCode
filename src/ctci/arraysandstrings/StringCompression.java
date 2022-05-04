@@ -2,7 +2,7 @@ package ctci.arraysandstrings;
 
 public class StringCompression {
     public String compress(String str) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(str.length());
         int freq = 0;
 
         for (int i = 0; i < str.length(); i++) {
