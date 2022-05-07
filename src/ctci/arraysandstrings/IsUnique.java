@@ -7,13 +7,23 @@ public class IsUnique {
         for (int i = 0; i < s.length(); i++) {
             int val = s.charAt(i) - 'a';
 
-            if ((checker & (1 << val)) > 0) {
+            int valBits = 1 << val;
+
+            if (isSeenBefore(checker, valBits)) {
                 return false;
             }
 
-            checker |= 1 << val;
+            checker = setCharAsSeen(checker, valBits);
         }
 
         return true;
+    }
+
+    private static int setCharAsSeen(int checker, int valBits) {
+        return checker | valBits;
+    }
+
+    private static boolean isSeenBefore(int checker, int valBits) {
+        return (checker & valBits) > 0;
     }
 }
