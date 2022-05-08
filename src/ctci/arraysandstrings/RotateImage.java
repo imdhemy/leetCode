@@ -4,20 +4,30 @@ public class RotateImage {
     public void rotate(int[][] matrix) {
         int N = matrix.length;
 
-        for (int i = 0; i < N; i++) {
-            for (int j = i; j < N; j++) {
-                int tmp = matrix[i][j];
-                matrix[i][j] = matrix[j][i];
-                matrix[j][i] = tmp;
-            }
-        }
+        int layer = 0;
 
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N / 2; j++) {
-                int tmp = matrix[i][j];
-                matrix[i][j] = matrix[i][N - j - 1];
-                matrix[i][N - j - 1] = tmp;
+        while (layer < N / 2) {
+            int first = layer;
+            int last = N - first - 1;
+
+            for (int i = layer; i < last; i++) {
+                int offset = i - first;
+
+                int top = matrix[first][i];
+
+                // top = left
+                matrix[first][i] = matrix[last - offset][first];
+
+                // left = bottom
+                matrix[last - offset][first] = matrix[last][last - offset];
+
+                // bottom = right
+                matrix[last][last - offset] = matrix[i][last];
+
+                // right = top
+                matrix[i][last] = top;
             }
+            layer++;
         }
     }
 }
