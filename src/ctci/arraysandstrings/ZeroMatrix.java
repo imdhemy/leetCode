@@ -1,27 +1,32 @@
 package ctci.arraysandstrings;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class ZeroMatrix {
     public void setZeros(int[][] matrix) {
-        List<List<Integer>> zeros = new ArrayList<>();
+        boolean[] rows = new boolean[matrix.length];
+        boolean[] cols = new boolean[matrix[0].length];
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j] == 0) zeros.add(List.of(i, j));
-            }
-        }
+        for (int i = 0; i < matrix.length; i++)
+            for (int j = 0; j < matrix[i].length; j++)
+                if (matrix[i][j] == 0) {
+                    rows[i] = true;
+                    cols[j] = true;
+                }
 
-        for (List<Integer> cords : zeros) {
-            int x = cords.get(0);
-            int y = cords.get(1);
+        for (int i = 0; i < rows.length; i++)
+            if (rows[i]) nullifyRow(matrix, i);
 
-            for (int i = 0; i < matrix[x].length; i++)
-                matrix[x][i] = 0;
+        for (int i = 0; i < cols.length; i++)
+            if (cols[i]) nullifyCol(matrix, i);
+    }
 
-            for (int i = 0; i < matrix.length; i++)
-                matrix[i][y] = 0;
-        }
+    private void nullifyCol(int[][] matrix, int col) {
+        for (int i = 0; i < matrix.length; i++)
+            matrix[i][col] = 0;
+    }
+
+    private void nullifyRow(int[][] matrix, int row) {
+        Arrays.fill(matrix[row], 0);
     }
 }
