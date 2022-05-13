@@ -86,3 +86,4 @@ I'll try to map the "Cracking the coding interview problems" into LeetCode probl
 | Urilfy                 | Not Found                                                                          |
 | Palindrome Permutation | Premium                                                                            |
 | One Away               | Premium                                                                            |
+| String Compression     | [443. String Compression](https://leetcode.com/problems/string-compression/)       |
