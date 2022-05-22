@@ -52,4 +52,16 @@ public class ListNode {
 
         return result;
     }
+
+    public ListNode find(int value, ListNode head) {
+        if (null == head) return null;
+
+        ListNode node = head;
+        while (node != null) {
+            if (node.val == value) return node;
+            node = node.next;
+        }
+
+        return null;
+    }
 }
