@@ -53,10 +53,8 @@ public class ListNode {
         return result;
     }
 
-    public ListNode find(int value, ListNode head) {
-        if (null == head) return null;
-
-        ListNode node = head;
+    public ListNode find(int value) {
+        ListNode node = this;
         while (node != null) {
             if (node.val == value) return node;
             node = node.next;
