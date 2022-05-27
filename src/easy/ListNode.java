@@ -20,7 +20,6 @@ public class ListNode {
     }
 
     public static ListNode fromArray(int[] items) {
-        if (items.length == 0) return null;
         ListNode head = new ListNode(items[0]);
         ListNode pointer;
 
