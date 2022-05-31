@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 class CheckPermutationTest {
     @Test
     void check() {
+        Assertions.assertFalse(CheckPermutation.check("aab", "abc"));
+
         Assertions.assertTrue(CheckPermutation.check("", ""));
         Assertions.assertTrue(CheckPermutation.check(null, null));
 
