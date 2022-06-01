@@ -21,12 +21,12 @@ public class ListNode {
 
     public int[] toArray() {
         List<Integer> list = new ArrayList<>();
-        list.add(val);
-        ListNode pointer = next;
 
-        while (pointer != null) {
-            list.add(pointer.val);
-            pointer = pointer.next;
+        ListNode node = this;
+
+        while (null != node) {
+            list.add(node.val);
+            node = node.next;
         }
 
         int[] result = new int[list.size()];
