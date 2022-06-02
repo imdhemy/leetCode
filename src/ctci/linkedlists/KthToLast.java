@@ -3,25 +3,18 @@ package ctci.linkedlists;
 import easy.ListNode;
 
 public class KthToLast {
-    public ListNode find(ListNode head, int n) {
-        int length = 0;
-        ListNode tmp;
+    public ListNode find(ListNode head, int k) {
+        ListNode pointer = head;
+        ListNode runner = head;
 
-        tmp = head;
-
-        while (tmp != null) {
-            length++;
-            tmp = tmp.next;
+        for (int i = 0; i < k; i++) {
+            if (runner == null) return null;
+            runner = runner.next;
         }
 
-        int index = 0;
-
-        ListNode pointer;
-
-        pointer = head;
-        while (pointer != null && length - index > n) {
+        while (runner != null) {
             pointer = pointer.next;
-            index++;
+            runner = runner.next;
         }
 
         return pointer;
