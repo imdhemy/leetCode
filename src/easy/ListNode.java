@@ -19,6 +19,23 @@ public class ListNode {
         this.next = next;
     }
 
+    public static ListNode fromArray(int[] items) {
+        if (items.length == 0) return null;
+        ListNode head = new ListNode(items[0]);
+        ListNode pointer;
+
+        pointer = head;
+
+        for (int i = 1; i < items.length; i++) {
+            ListNode node = new ListNode(items[i]);
+            pointer.next = node;
+
+            pointer = node;
+        }
+
+        return head;
+    }
+
     public int[] toArray() {
         List<Integer> list = new ArrayList<>();
 
