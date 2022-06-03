@@ -8,7 +8,30 @@ public class SumLists {
     }
 
     public ListNode sumForward(ListNode first, ListNode second) {
-        return first;
+        return numToListForward(listToNumForward(first) + listToNumForward(second));
+    }
+
+    private int listToNumForward(ListNode node) {
+        int sum = 0;
+
+        while (node != null) {
+            sum = sum * 10 + node.val;
+            node = node.next;
+        }
+
+        return sum;
+    }
+
+    private ListNode numToListForward(int num) {
+        int reversed = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num /= 10;
+        }
+
+        return numToList(reversed);
     }
 
     private int listToNum(ListNode head) {
