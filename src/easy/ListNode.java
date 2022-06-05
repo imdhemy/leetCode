@@ -61,4 +61,14 @@ public class ListNode {
 
         return null;
     }
+
+    public void append(ListNode node) {
+        ListNode tail = this;
+
+        while (tail.next != null) {
+            tail = tail.next;
+        }
+
+        tail.next = node;
+    }
 }
