@@ -11,13 +11,13 @@ class PalindromeTest {
         Palindrome obj = new Palindrome();
 
         Assertions.assertTrue(obj.isPalindrome(ListNode.fromArray(new int[]{1})));
-        Assertions.assertTrue(obj.isPalindrome(ListNode.fromArray(new int[]{11})));
-        Assertions.assertTrue(obj.isPalindrome(ListNode.fromArray(new int[]{121})));
-        Assertions.assertTrue(obj.isPalindrome(ListNode.fromArray(new int[]{12121})));
-        Assertions.assertTrue(obj.isPalindrome(ListNode.fromArray(new int[]{1221})));
+        Assertions.assertTrue(obj.isPalindrome(ListNode.fromArray(new int[]{1, 1})));
+        Assertions.assertTrue(obj.isPalindrome(ListNode.fromArray(new int[]{1, 2, 1})));
+        Assertions.assertTrue(obj.isPalindrome(ListNode.fromArray(new int[]{1, 2, 1, 2, 1})));
+        Assertions.assertTrue(obj.isPalindrome(ListNode.fromArray(new int[]{1, 2, 2, 1})));
 
-        Assertions.assertFalse(obj.isPalindrome(ListNode.fromArray(new int[]{12})));
-        Assertions.assertFalse(obj.isPalindrome(ListNode.fromArray(new int[]{123})));
-        Assertions.assertFalse(obj.isPalindrome(ListNode.fromArray(new int[]{112})));
+        Assertions.assertFalse(obj.isPalindrome(ListNode.fromArray(new int[]{1, 2})));
+        Assertions.assertFalse(obj.isPalindrome(ListNode.fromArray(new int[]{1, 2, 3})));
+        Assertions.assertFalse(obj.isPalindrome(ListNode.fromArray(new int[]{1, 1, 2})));
     }
 }

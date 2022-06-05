@@ -3,26 +3,32 @@ package ctci.linkedlists;
 import easy.ListNode;
 
 public class Palindrome {
-    public boolean isPalindrome(ListNode head) {
-        String num = String.valueOf(listToNum(head));
-
-        int lt = 0;
-        int rt = num.length() - 1;
-
-        while (lt < rt) if (num.charAt(lt++) != num.charAt(rt--)) return false;
-
-        return true;
+    public boolean isPalindrome(ListNode node) {
+        ListNode reversed = reverse(node);
+        return compare(node, reversed);
     }
 
-    private int listToNum(ListNode head) {
-        int sum = 0;
-        int pow = 0;
+    private ListNode reverse(ListNode node) {
+        ListNode reversed = null;
 
-        while (head != null) {
-            sum += head.val * Math.pow(10, pow++);
-            head = head.next;
+        while (node != null) {
+            ListNode n = new ListNode(node.val);
+            n.next = reversed;
+            reversed = n;
+            node = node.next;
         }
 
-        return sum;
+        return reversed;
+    }
+
+    private boolean compare(ListNode original, ListNode reversed) {
+        while (original != null && reversed != null) {
+            if (reversed.val != original.val) return false;
+
+            reversed = reversed.next;
+            original = original.next;
+        }
+
+        return original == null && reversed == null;
     }
 }
