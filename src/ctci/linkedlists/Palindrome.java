@@ -2,33 +2,30 @@ package ctci.linkedlists;
 
 import easy.ListNode;
 
+import java.util.Stack;
+
 public class Palindrome {
     public boolean isPalindrome(ListNode node) {
-        ListNode reversed = reverse(node);
-        return compare(node, reversed);
-    }
+        ListNode slow = node;
+        ListNode fast = node;
 
-    private ListNode reverse(ListNode node) {
-        ListNode reversed = null;
+        Stack<Integer> firstHalf = new Stack<>();
 
-        while (node != null) {
-            ListNode n = new ListNode(node.val);
-            n.next = reversed;
-            reversed = n;
-            node = node.next;
+        while (fast != null && fast.next != null) {
+            firstHalf.push(slow.val);
+            slow = slow.next;
+            fast = fast.next.next;
         }
 
-        return reversed;
-    }
+        if (fast != null) slow = slow.next;
 
-    private boolean compare(ListNode original, ListNode reversed) {
-        while (original != null && reversed != null) {
-            if (reversed.val != original.val) return false;
+        while (slow != null) {
+            int value = firstHalf.pop();
+            if (value != slow.val) return false;
 
-            reversed = reversed.next;
-            original = original.next;
+            slow = slow.next;
         }
 
-        return original == null && reversed == null;
+        return true;
     }
 }
