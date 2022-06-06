@@ -1,17 +1,21 @@
 const ctx = document.getElementById('myChart').getContext('2d');
+
+const days = [
+    '6 June 2022',
+    '7 June 2022',
+    '8 June 2022',
+    '9 June 2022',
+    '10 June 2022',
+];
+const minutes = [19];
+
 const myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: [
-            '6 June 2022',
-            '7 June 2022',
-            '8 June 2022',
-            '9 June 2022',
-            '10 June 2022',
-        ],
+        labels: days,
         datasets: [{
             label: '# Minutes',
-            data: [0, 10, 15, 3],
+            data: minutes,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
