@@ -1,8 +1,10 @@
 package ctci.stacksandqueues;
 
+import java.util.Stack;
+
 public class MyQueue {
-    Stack oldest = new Stack();
-    Stack newest = new Stack();
+    Stack<Integer> oldest = new Stack<>();
+    Stack<Integer> newest = new Stack<>();
 
     public void add(int value) {
         newest.push(value);
