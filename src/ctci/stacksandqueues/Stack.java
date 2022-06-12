@@ -1,30 +1,42 @@
 package ctci.stacksandqueues;
 
-import java.util.ArrayList;
-import java.util.List;
+import easy.ListNode;
 
 public class Stack {
-    int top = -1;
-    List<Integer> list = new ArrayList<>();
-
-    public void push(int value) {
-        list.add(value);
-        top++;
-    }
-
-    public boolean isEmpty() {
-        return top == -1;
-    }
-
-    public int size() {
-        return top + 1;
-    }
+    private int size = 0;
+    private ListNode top;
 
     public int pop() {
-        return list.get(top--);
+        size--;
+        int value = top.val;
+
+        top = top.next;
+
+        return value;
+    }
+
+    public void push(int value) {
+        size++;
+        ListNode node = new ListNode(value);
+
+        if (top == null) {
+            top = node;
+            return;
+        }
+
+        node.next = top;
+        top = node;
     }
 
     public int peek() {
-        return list.get(top);
+        return top.val;
+    }
+
+    public boolean isEmpty() {
+        return top == null;
+    }
+
+    public int size() {
+        return size;
     }
 }
