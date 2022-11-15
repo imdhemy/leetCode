@@ -1,15 +1,16 @@
 package notes;
 
 final public class MaxSubArray {
-    public int findMaxSubArraySum(int[] array) {
-        int maxSum = 0;
-        int currentSum = 0;
+    public int findMaxSubArraySum(int[] nums) {
+        int max = Integer.MIN_VALUE, sum = 0;
 
-        for (int j : array) {
-            currentSum = Math.max(j, currentSum + j);
-            maxSum = Math.max(maxSum, currentSum);
+        for (int num : nums) {
+            sum += num;
+            max = Math.max(sum, max);
+
+            if (sum < 0) sum = 0;
         }
 
-        return maxSum;
+        return max;
     }
 }
