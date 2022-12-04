@@ -19,4 +19,16 @@ public class BinarySearch {
 
         return search(arr, lt, mid - 1, num);
     }
+
+    public int jumpSearch(int[] arr, int num) {
+        int k = 0;
+        int n = arr.length;
+
+        for (int b = n / 2; b >= 1; b /= 2)
+            while (k + b < n && arr[k + b] <= num) k += b;
+
+        if (arr[k] == num) return k;
+
+        return -1;
+    }
 }
