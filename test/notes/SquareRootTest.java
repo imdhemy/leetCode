@@ -11,5 +11,6 @@ class SquareRootTest {
         Assertions.assertEquals(3, sqrt.newton(9));
         Assertions.assertEquals(4, sqrt.newton(16));
         Assertions.assertEquals(5, sqrt.newton(25));
+        Assertions.assertEquals(90, sqrt.newton(8192));
     }
 }

@@ -2,7 +2,7 @@ package notes;
 
 public class SquareRoot {
     public int newton(int num) {
-        double epsilon = 1e-15;
+        double epsilon = 0.1;
         double guess = num;
         double diff = Integer.MAX_VALUE;
 
